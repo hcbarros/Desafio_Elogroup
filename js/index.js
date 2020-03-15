@@ -48,8 +48,9 @@ var stop = '';
 function mascaraFoneFixo() {
     
     var campo = document.getElementById("fonefixo");        
-    campo.value = campo.value.replace( /^0/,'' )   
-                             .replace( /^(\w\w)(\w)/, '$1-$2' );
+    campo.value = campo.value.replace( /^0/,'' )
+                             .replace(/\D/g, '')      
+                             .replace( /^(\d\d)(\d)/, '$1-$2' );
                              
     if ( campo.value.length > 11 ) campo.value = stop;
     else stop = campo.value;    
@@ -64,15 +65,11 @@ function validaTelefone() {
         
     if(fone.length > 0) {
          var valor = fone.replace(/\D/g, '');
-         if(valor.length == 0)  {
-            erro.innerHTML = "Digite Apenas números!";
-            return false;
-         } 
          if(valor.length < 10)  {
             erro.innerHTML = "Formato de telefone inválido!";
             return false;
          }        
-    }
+    }    
     return fone;
 }
 
@@ -99,16 +96,16 @@ botao.addEventListener('click', () => {
         
       var nome = validaNome();
       var fonefixo = validaTelefone();
-  
+             
       var conheceu = document.querySelector("#conheceu").value;
       var rede = document.form.rede.value;
       
-      if(nome && fonefixo) {
-          
+      if(nome && (fonefixo || fonefixo.length === 0)) {
+        
             var data = {};
             data.nome = nome;
             data.fonefixo  = fonefixo;
-            data.conheceu = conheceu;
+            data.como_conheceu = conheceu;
             data.rede = rede;
             
             if(rede == 'sim') {

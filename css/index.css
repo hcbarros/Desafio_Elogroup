@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'times';
+        src: url('fonts/times.ttf') format('truetype');    
+}
+
+.central {    
+    display: flex;
+    justify-content: center;
+    justify-items: center;        
+    text-align: center;
+    width: 50%;
+    padding-left: 25%;
+}
+
+.linha {
+    display: flex;
+    justify-content: center;
+    justify-items: center;        
+    text-align: center;    
+}   
+
+#linha1 {
+    margin-top: 1%;
+    width: 53%;    
+    border-bottom: thin solid #d3d3d3    
+}
+
+#linha2 {
+    margin-bottom: 1%;
+    width: 53%;
+    border-bottom: thin solid #7800ff    
+}
+
+.radioSim {
+    margin-right: 10%;
+    display: flex;    
+}
+
+.radioSim > a, .radioNao > a {
+    margin-top: 7%;
+    font-family: 'times';
+    color: #565656; 
+    font-size: 0.9em;
+    font-weight: bold;    
+}
+
+.radioNao {
+    display: flex;
+}
+
+.radios {
+    margin-top: 2%;
+}
+
+#img1 {
+    margin-bottom: 5%;
+    margin-top: 2%;
+    width: 70%;
+    height: 70%;
+}
+
+#atualizacao {
+    color: #7800ff;
+    font-family: 'times';
+    font-weight: 100;
+    font-size: 1.4em;    
+}
+
+#aviso1, #aviso2 {
+    color: #565656;
+    font-family: 'times';
+    font-size: 1.37em;
+    font-weight: 100;          
+}
+
+#aviso2 {
+    margin-bottom: 1.5%;
+}
+
+.campos {
+    padding-left: 26%;
+    margin-top: 3.5%;
+    font-family: 'times';
+    color: #565656; 
+    font-size: 1em;
+    font-weight: bold;
+    width: 48%  
+}
+
+::placeholder {
+    color: #7800ff !important;
+    opacity: 1;
+    font-family: 'times';
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+#botao {
+    margin-top: 10%;
+    width: 90%;
+    color:white;
+    font-weight: bold;
+    background:#7800ff;    
+}
+
+.campos > a {
+    color: red;
+}
+
+.campos > label {
+    color: #565656; 
+    font-size: 1.2em;
+    font-weight: bold
+}
+
+.pergunta > a {
+    color: #565656;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 5%;    
+    font-family: 'times'
+}
+
+input[type="text"] {
+    background-color: #efefef;
+    height: 2%;
+    border: none;
+    margin-top: 0;
+}
+
+#conheceu {    
+   background-color: #eee;    
+   height: 38px;
+   width: 100%;        
+   border:none;
+   border: 1px solid #dcdcdc;
+   border-radius: 0.3em;
+   font-family: 'times' 
+}
+
+.select span {
+   position: absolute;     
+   background: url(images/arrow.png) no-repeat #7800ff;
+   background-position: 50% center;
+   width: 3vw;   
+   height: 38px;
+   margin-left: 45%;     
+   border-top-right-radius: 0.3em;
+   border-bottom-right-radius: 0.3em;  
+   pointer-events: none;
+}
+
+.select > * {
+    margin-bottom: 4%;
+}
+
+#data {
+    margin-bottom: -1%;
+}
+
+.container, .containerCheck {
+    display: block;
+    position: relative;
+    padding-left: 34px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+    
+  .container input, .containerCheck input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+    
+  .checkmark, .checkmarkTipo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2vw;
+    width: 2vw;
+    background-color: #efefef;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+  }
+
+  .checkmarkTipo {
+      border-radius: 0%;
+  }
+    
+  .container:hover input ~ .checkmark,
+  .containerCheck:hover input ~ .checkmarkTipo  {
+    background-color: #ccc;
+  }
+    
+  .container input:checked ~ .checkmark,
+  .containerCheck input:checked ~ .checkmarkTipo {
+    background-color: #7800ff;
+  }
+    
+  .checkmark:after, .checkmarkTipo:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+    
+  .container input:checked ~ .checkmark:after, 
+  .containerCheck input:checked ~ .checkmarkTipo:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+      top: 35%;
+      left: 35%;
+      width: 0.6vw;
+      height: 0.6vw;
+      border-radius: 50%;
+      background: white;      
+  }
+
+  .containerCheck .checkmarkTipo:after {
+    top: 7%;
+    left: 35%;
+    width: 0.5vw;
+    height: 1vw;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    .fontResp {
+        font-size: 60%;                
+    }        
+    .container, .containerCheck {
+        padding-left: 20px;
+    }     
+    #conheceu, .select span {
+        height: 23px;
+    }    
+  }
+  

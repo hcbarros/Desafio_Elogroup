@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+</head>
+    <body>
+
+        <div class="linha">
+            <div id="linha1"></div>             
+        </div>    
+        <div class="central">
+            <img id="img1" src="css/images/EloGroup.png"/>            
+        </div>    
+        <div class="central fontResp">
+            <a id="atualizacao">Atualização Cadastral</a>                        
+        </div>
+        <div class="linha">
+            <div id="linha2"></div>                        
+        </div>
+        <div class="central fontResp">
+            <a id="aviso1">Olá, preciso dos seus dados de cadastro. É só preencher</a>            
+        </div>
+        <div class="central fontResp">
+            <a id="aviso2">o formulário abaixo. Vai levar apenas alguns minutinhos, ok?</a>            
+        </div>
+
+        <form name="form">
+                   
+            <div class="campos fontResp">
+                <label for="nome">Nome:*</label>
+                <input id="nome" type="text">
+                <a id="erronome" class="erro"></a>
+            </div>
+            <div class="campos fontResp">
+                <label for="fonefixo">Telefone:</label>
+                <input id="fonefixo" type="text" name="fixo" placeholder="99-99999999">
+                <a id="errofonefixo"></a>
+            </div>
+           
+            <div class="campos select fontResp">
+                <label for="conheceu">Como nos conheceu?</label>
+                
+                <span></span>
+
+            </div>
+            
+            <div class="central pergunta fontResp">
+                <a>Possui rede social?</a>
+            </div>
+    
+            <div class="central radios fontResp">                  
+                <div id="redeSim" class="radioSim">
+                                                       
+                </div>             
+                <div id="redeNao" class="radioNao">                    
+                                        
+                </div>
+            </div>
+
+            <div class="central pergunta fontResp">
+                <a>Quais?</a>
+            </div>     
+
+            <div class="central radios fontResp">                  
+                <div id="facebook" class="radioSim">
+                                                          
+                </div>             
+                <div id="linkedin" class="radioSim">                    
+                                        
+                </div>
+                <div id="instagram" class="radioNao">                    
+                                        
+                </div>
+            </div>
+            
+        </form>
+        
+        <div class="central">
+            <button class="fontResp" id="botao">Enviar</button>
+        </div>
+
+        
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>    
+        <script type="text/javascript" src="js/index.js"></script>   
+        
+    </body>        
+</html>

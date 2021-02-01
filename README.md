@@ -1,11 +1,4 @@
 
-Meu nome na plataforma Gupy é Henrique e o processo seletivo é para Estágio em Desenvolvimento - Automação e RPA - Brasília.
-
-No Github, convite para colaborador apenas em modo leitura não está disponível. Os convites são para leitura e edição.
-
-
-Na raiz do projeto encontram-se pastas e arquivos.
-
 A pasta "css" possui imagens, uma fonte extra, arquivos auxiliares do Jquery e um arquivo index.css de define algumas características da página.
 
 Na pasta "js" possui um arquivo index.js com as rotinas necessárias e dois arquivos Jquery auxiliares.
